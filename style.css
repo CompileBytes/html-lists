@@ -1,0 +1,125 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f8fe;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #f1f8fe, #c3e7fc);
+}
+
+h1 {
+  text-align: center;
+  color: #1e88e5;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #5f6368;
+  margin-top: 30px;
+  font-size: 1.8em;
+  text-align: left;
+  font-weight: 600;
+}
+
+ul, ol {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+ul.custom-bullets, ol.custom-numbers {
+  list-style-type: none;
+}
+
+li {
+  margin: 10px 0;
+  font-size: 1.2em;
+  line-height: 1.8;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Unordered list with custom bullets */
+ul.custom-bullets li {
+background: url('https://img.icons8.com/ios/50/000000/checked-checkbox.png') no-repeat left center;
+padding-left: 40px; /* Adjust padding to make space for the icon */
+background-size: 22px; /* Size the icon appropriately */
+font-style: italic;
+list-style-type: none; /* Remove the default list marker */
+}
+
+ul.custom-bullets li:hover {
+  transform: translateX(10px);
+}
+
+/* Styled Ordered list */
+ol.numbered-style li {
+  color: #00796b;
+  font-weight: bold;
+}
+
+ol.numbered-style li:hover {
+  color: #004d40;
+  background-color: #e0f2f1;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Custom Ordered list with numbers */
+ol.custom-numbers {
+  counter-reset: list-counter;
+  padding-left: 40px;
+}
+
+ol.custom-numbers li {
+  counter-increment: list-counter;
+  margin: 10px 0;
+  padding-left: 30px;
+}
+
+ol.custom-numbers li::before {
+  content: counter(list-counter) ". ";
+  color: #ff5722;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+ol.custom-numbers li:hover {
+  background-color: #ffebee;
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+/* Nested List Styling */
+ul.nested-list {
+  margin-left: 40px;
+  background-color: #f9fbe7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul.nested-list li {
+  margin-left: 20px;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #424242;
+}
+
+ul.nested-list li:hover {
+  background-color: #ffccbc;
+  border-radius: 5px;
+  padding-left: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects for all list items */
+li:hover {
+  background-color: #c8e6c9;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
